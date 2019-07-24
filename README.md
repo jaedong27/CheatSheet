@@ -13,3 +13,11 @@ $ ffmpeg -i [입력 영상 파일명] -vf "transpose=[회전 모드]" [저장할
 
 실제로 아래와 같이 사용한다.
 $ ffmpeg -i in.mp4 -vf "transpose=3" out.mp4
+
+- 동영상 합치기
+a.mp4 랑 b.mp4 를 합칠때 
+$ cat files.txt
+file 'a.mp4'
+file 'b.mp4'
+
+$ ffmpeg -f concat -i files.txt -c copy c.mp4
