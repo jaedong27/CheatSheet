@@ -21,3 +21,6 @@ file 'a.mp4'
 file 'b.mp4'
 
 $ ffmpeg -f concat -i files.txt -c copy c.mp4
+
+- 이미지로 영상 만들기
+$ ffmgeg -loop true -i input.jpg -ss 00:00:00 -to 01:15:00 output.mp4
