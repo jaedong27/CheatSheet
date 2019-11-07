@@ -24,3 +24,31 @@ $ ffmpeg -f concat -i files.txt -c copy c.mp4
 
 - 이미지로 영상 만들기
 $ ffmgeg -loop true -i input.jpg -ss 00:00:00 -to 01:15:00 output.mp4
+
+Git Command
+
+git cached
+git log --pretty=oneline -2
+git log --pretty=oneline -p diff 까지 보여주는거
+git checkout -b
+git diff --cached
+git merge "현재로 합치고 싶은 branch"
+
+git remote add upstream https://github.com/blah/원격 저장소
+git remote -v  => 연결된 저장소
+
+git commit --amend 현재 커밋에 합쳐서 커밋
+
+git tag "tag-name"
+git push --tags    => 태그 푸쉬할때
+
+git stash
+git stash list
+git stash apply --index {number}
+git stash drop {number}
+git stash pop ???
+
+git branch
+
+체크아웃에다가 브랜드 생성
+git checkout -b <branch>
