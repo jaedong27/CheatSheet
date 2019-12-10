@@ -25,6 +25,9 @@ $ ffmpeg -f concat -i files.txt -c copy c.mp4
 - 이미지로 영상 만들기
 $ ffmgeg -loop true -i input.jpg -ss 00:00:00 -to 01:15:00 output.mp4
 
+- 영상 밝기 바꾸기( 좀 더 나중에 봐야할 듯 )
+$ ffmpeg -i %var%.mp4 -ss 00:00:00 -to 00:00:30 -vf "eq=brightness=-0.2" -c:a copy %var%_80.mp4
+
 Git Command
 
 git cached
