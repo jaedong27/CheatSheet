@@ -21,8 +21,8 @@ file 'a.mp4'
 file 'b.mp4'
 $ ffmpeg -f concat -i files.txt -c copy c.mp4
 
-- ffmpeg 사
-$ ffmpeg -ss 00:03 -to 01:55 -i R1_1.mp4 -c:v nvenc_h264 신흥-대동.mp4
+- ffmpeg h264 코덱 사용 및 codec 사용할때 (30M bitrate면 충분히 쓸만함)
+$ ffmpeg -ss 00:03 -to 01:55 -i R1_1.mp4 -c:v nvenc_h264 -b:v 30M 신흥-대동.mp4
 
 - 이미지로 영상 만들기
 $ ffmgeg -loop true -i input.jpg -ss 00:00:00 -to 01:15:00 output.mp4
