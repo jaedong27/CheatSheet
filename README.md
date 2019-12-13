@@ -19,7 +19,6 @@ a.mp4 랑 b.mp4 를 합칠때
 $ cat files.txt
 file 'a.mp4'
 file 'b.mp4'
-
 $ ffmpeg -f concat -i files.txt -c copy c.mp4
 
 - 이미지로 영상 만들기
