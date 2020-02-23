@@ -3,7 +3,7 @@
 # FFMPEG
 
 - 이미지 시퀀스 영상으로 
-ffmpeg -start_number 383 -i %4d.png -c:v libx264 -vf fps=30 out.mp4
+$ ffmpeg -start_number 383 -i %4d.png -c:v libx264 -preset slow  -profile:v high -level:v 4.0 -pix_fmt yuv420p -crf 22 -codec:a aac Output.mp4
 
 - 고프로 회전할때 명령어 ( 링크 : https://blog.naver.com/PostView.nhn?blogId=chandong83&logNo=221298545679&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView )
 $ ffmpeg -i [입력 영상 파일명] -vf "transpose=[회전 모드]" [저장할 영상 파일명]
