@@ -63,6 +63,14 @@ git stash drop {number}
 git stash pop ???
 
 git branch
+git branch -d {브랜치이름}
+
+git log --graph --decorate
 
 체크아웃에다가 브랜드 생성
 git checkout -b <branch>
+
+git 참고하기 좋은 싸이트
+https://mylko72.gitbooks.io/git/content/remote/remote_update.html
+git remote show origin => 원격과 비교하는거
+git remote prune => 원격의 브랜치 삭제하기
