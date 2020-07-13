@@ -27,6 +27,17 @@ $ ffmpeg -f concat -i files.txt -c copy c.mp4
 - ffmpeg h264 코덱 사용 및 codec 사용할때 (30M bitrate면 충분히 쓸만함)
 $ ffmpeg -ss 00:03 -to 01:55 -i R1_1.mp4 -c:v nvenc_h264 -b:v 30M 신흥-대동.mp4
 
+
+- h264 코덱으로 압축 ( 그래픽 카드 사용 )
+$ ffmpeg -i 4K_#3-Night_Garden_V2.mov -c:v h264_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#3-Night_Garden_V2_3840_H264.mp4
+$ ffmpeg -i 4K_#4-Rose_Garden_V2.mov -c:v h264_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#4-Rose_Garden_V2_3840_H264.mp4
+$ ffmpeg -i 4K_#7-Blue_Garden_V2.mov -c:v h264_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#7-Blue_Garden_V2_3840_H264.mp4
+
+- h265 코덱으로 압축 ( 그래픽 카드 사용 ) 
+$ ffmpeg -i 4K_#3-Night_Garden_V2.mov -c:v hevc_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#3-Night_Garden_V2_3840_H265.mp4
+$ ffmpeg -i 4K_#4-Rose_Garden_V2.mov -c:v hevc_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#4-Rose_Garden_V2_3840_H265.mp4
+$ ffmpeg -i 4K_#7-Blue_Garden_V2.mov -c:v hevc_nvenc -b:v 25M -maxrate 30M -pix_fmt yuv420p -vf scale=3840:-1 4K_#7-Blue_Garden_V2_3840_H265.mp4
+
 - ffmpeg metadata 확인하기
 $ ffmpeg -i in.mp4 -c copy -map_metadata 0 -map_metadata:s:v 0:s:v -map_metadata:s:a 0:s:a -f ffmetadata in.txt
 
